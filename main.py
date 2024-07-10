@@ -78,37 +78,6 @@ if __name__ == '__main__':
         raise Exception("Need to define directory for pre-processed data")
 
     """#################################################################################################################
-    #   ANALYSIS PARAMETERS
-    #
-    #   - standard parameters are in parameter_files/standard_analysis_parameters
-    #################################################################################################################"""
-
-    # binning
-    # ------------------------------------------------------------------------------------------------------------------
-    # "temporal" --> counts spikes per time bin and divides by time bin size
-    # "temporal_spike" --> counts spikes per time bin
-    # "temporal_binary" --> checks if cell fires within time bin
-    params.binning_method = args.binning_method
-
-    # interval for temporal binning in s
-    # ------------------------------------------------------------------------------------------------------------------
-    params.time_bin_size = args.time_bin_size
-
-    # #spikes per bin for spike binning (usually between 10 and 15)
-    params.spikes_per_bin = 12
-
-    # spatial resolution in cm --> for rat
-    # e maps etc.
-    params.spatial_resolution = 5
-
-    # # speed filter in cm/s --> every data with lower speed is neglected
-    params.speed_filter = 5
-
-    # stable cell method: which method to use to find stable cells ("k_means", "mean_firing_awake",
-    # "mwu_sleep", "ks_sleep", "ks_awake", "mwu_awake")
-    params.stable_cell_method = "mwu_awake"
-
-    """#################################################################################################################
         #   MAIN ANALYSIS PART
     #################################################################################################################"""
 
