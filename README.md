@@ -43,34 +43,17 @@ Contains classes/functions to analyze ONE phase (e.g. sleep or behavior).
 
 Contains classes/functions to analyze TWO or more phase (e.g. sleep and behavior).
 
-### multiple_sessions.py
-
-Contains classes/functions to analyze multiple sessions (e.g. different animals/days)
-
 ### pre_processing.py
 
 Contains classes/functions for pre-processing data (e.g. binning) . Is used by analysis_methods.py
-
-* class PreProcess: base class
-  * class PreProcess: derived from PreProcess. Computes e.g. temporal spike binning or 
-  constant nr. of spikes binning
 
 ### support_functions.py
 Contains simple functions that are needed to compute things. Used by almost all functions/classes.
 
 ### ml_methods.py
-Machine learning approaches for one or two populations:
-* class MlMethodsOnePopulation
-* class MlMethodsTwoPopulation
+Machine learning related approaches
 
 ## /parameter_files
-* [ANIMAL ID].py 
-  * 3 dictionaries: 
-     * data description dictionary: from .des file --> which index 
-  corresponds to which phase of the experiment
-     * data selection dictionary: where to find the data, which cell types
-     * cell_type_sub_div_dic: defines where cell types are split (
-     e.g. left and right hemisphere cells) 
-* standard_analysis_parameters.py: stores all standard parameters/
-place holders that are set at a later stage --> almost all later computations
-use parameters stored in this class
+* contains parameters for each session
+* naming convention: [ANIMAL ID].py 
+
